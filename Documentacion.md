@@ -8,10 +8,14 @@ es decir cosas de la base datos.
 
 ERB es acceso a html en el cual puede llevar codigo ruby
 
-<% evalua el codigo de la pagina %>
+Migracion son archivos que se encargan de hacer modificaciones ala bd
+
+form_for es un formulario
+
 
 ```Codigo ruby
 <%= imprime en la pagina web>
+<% evalua el codigo de la pagina %>
 
 Aplication controller es el controlador del framework
 
@@ -36,9 +40,31 @@ Aplication controller es el controlador del framework
 
 * __Paso 5:__ Generador de modelos rails generate model Article title:string body:text visits_count:integer
 
+* __Paso 6:__ cuando instale una gema debo hacer bundle install y creo la bd con rake db:create
+
+     rake db:migrate RAILS_ENV=development para corregir problema de migraciones
+
+    rake db:rollback hace operaciones inversas ala tabla es decir eliminar la tabla y las mofidicaciones delos campos y despues de eso escribo rake:db migrate 
+
 ```Modelo
 => la tabla => articles
 => campos => article.title() devuelve el titulo del articulos o cualquier otra tabla
+
 ```
 
+* __Paso 7:__ abro la consola de ruby con rails console
+
+  nombre modelo.all ---> select
+```ModeloBD
+  SELECT "geolocations".* FROM "geolocations"
+  GET pongo en routes post y en index.html.erb pongo <%= link_to "Recurso con POST","/welcome/index", method: :post %>
+  COLOR #15959F
+  POST
+  PATCH
+  PUT
+  DELETE
+```
+
+* __Paso8:__ para pasar datos ala vista desde el controlador utilizamos variables de clase @
+y sin el @ significa que solo se quedan en el controlador
 ### 3. 
